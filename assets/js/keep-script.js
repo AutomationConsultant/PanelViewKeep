@@ -8,13 +8,13 @@ $(document).ready(function() {
 		// add options link
 		var sendLink = '';
 		if (windowType == 'normal') {
-			sendLink += '<a class="hSRGPd keep_ext_sendto" href="#" data-type="panel"><span class="icon icon-external"></span> Send to Panel</a>';
+			sendLink += '<div class="hSRGPd-oKdM2c"><a class="hSRGPd keep_ext_sendto" href="#" data-type="panel"><span class="icon icon-external"></span> Send to Panel</a></div>';
 		} else {
-			sendLink += '<a class="hSRGPd keep_ext_sendto" href="#" data-type="normal"><span class="icon icon-external"></span>Send to Tab</a>';
+			sendLink += '<div class="hSRGPd-oKdM2c"><a class="hSRGPd keep_ext_sendto" href="#" data-type="normal"><span class="icon icon-external"></span>Send to Tab</a></div>';
 		}
-		sendLink += '<a class="hSRGPd keep_ext_collapse" href="#"><span class="icon icon-checkbox"></span> Collapse List View</a>';
-		sendLink += '<a class="hSRGPd keep_ext_icon" href="#"><span class="icon icon-checkbox"></span> Use alternate icon</a>';
-		sendLink += '<a class="hSRGPd keep_ext_about" href="http://bit.ly/paneldonate" target="_blank">Support Panel View for Keep</a>';
+		sendLink += '<div class="hSRGPd-oKdM2c"><a class="hSRGPd keep_ext_collapse" href="#"><span class="icon icon-checkbox"></span> Collapse List View</a></div>';
+		sendLink += '<div class="hSRGPd-oKdM2c"><a class="hSRGPd keep_ext_icon" href="#"><span class="icon icon-checkbox"></span> Use alternate icon</a></div>';
+		sendLink += '<div class="hSRGPd-oKdM2c"><a class="hSRGPd keep_ext_about" href="http://bit.ly/paneldonate" target="_blank">Support Panel View for Keep</a></div>';
 
 		$('div.hSRGPd-haAclf').prepend(sendLink);
 	});
