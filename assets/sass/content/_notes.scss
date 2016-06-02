@@ -109,9 +109,8 @@
     z-index: 999;
   }
 
-  // hide search result labels
+  // search result labels
   .#{$search}-#{$result}-#{$label} {
-    display: none;
   }
 
   // collapse list view option enabled
