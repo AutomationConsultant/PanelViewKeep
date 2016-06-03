@@ -45,7 +45,9 @@ module.exports = function(grunt) {
       }
     },
     scsslint: {
-      allFiles: ['assets/sass/*.scss'],
+      allFiles: [
+        'assets/sass/**/*.scss'
+      ],
       options: {
         config: '.scss-lint.yml',
         reporterOutput: 'report/scss-lint-report.xml',
