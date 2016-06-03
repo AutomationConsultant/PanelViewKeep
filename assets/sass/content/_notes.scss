@@ -8,11 +8,11 @@
 
   // active note
   .#{$single}-#{$item}.#{$full}-#{$screen}.#{$modal} {
-    top: 0 !important;
     bottom: 0;
     left: 0 !important;
-    right: 0;
     padding: 0;
+    right: 0;
+    top: 0 !important;
   }
 
   // active note wrapper
@@ -35,7 +35,7 @@
   // active note toolbar
   .#{$note}-#{$toolbar} {
     @include full-screen--toolbar;
-    background-color: rgba(0, 0, 0, 0.07); // fix for missing toolbar background
+    background-color: rgba(0, 0, 0, .07); // fix for missing toolbar background
   }
 
   // active note share screen
@@ -52,8 +52,8 @@
 
   // share note screen contact list
   .#{$share}-#{$scroll}-#{$content} {
-    min-height: 0 !important;
     max-height: calc(100vh - 96px) !important; // total height minus header and toolbar
+    min-height: 0 !important;
   }
 
   // active note share toolbar
@@ -78,15 +78,15 @@
 
   // new note container
   .#{$card}-#{$container}.#{$new} {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    right: 0;
     bottom: 0;
-    padding: 0;
-    margin: 0 !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    left: 0;
+    margin: 0 !important;
+    padding: 0;
+    position: fixed;
+    right: 0;
     width: 100% !important;
+    z-index: 1;
 
     // note inner
     .#{$note}-#{$inner} {
@@ -101,37 +101,33 @@
 
   // new note inner - active
   .#{$note}-#{$inner}.#{$note}-#{$active} {
-    width: 100% !important;
-    position: fixed;
-    top: 0;
     bottom: 0;
     left: 0;
+    position: fixed;
+    top: 0;
+    width: 100% !important;
     z-index: 999;
   }
 
   // search result labels
-  .#{$search}-#{$result}-#{$label} {
-  }
+  .#{$search}-#{$result}-#{$label} {}
 
   // collapse list view option enabled
   .collapse-list-view {
-
     // note list
     .#{$list}-#{$notes}.#{$block}-#{$line}-#{$list} {
-
       // image container
       .#{$note}-#{$image} {
         display: none;
       }
 
       // title
-      // reset the style so all notes look similar
       .#{$title}-#{$outer} {
-        padding: 12px 15px 15px !important;
-        font-family: 'Roboto Slab', 'Times New Roman', serif;
+        font-family: $font-stack-body;
         font-size: 14px;
         font-weight: normal;
         line-height: 19px !important;
+        padding: 12px 15px 15px !important;
       }
 
       // body
@@ -154,22 +150,22 @@
 
       // toolbar
       .#{$note}-#{$toolbar} {
-        visibility: hidden;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
         background-color: inherit !important;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        visibility: hidden;
       }
 
       .#{$note}-#{$inner}:hover .#{$note}-#{$toolbar} {
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
       }
 
       .#{$note}-#{$color} {
-        padding: 6px 0 !important;
         float: right;
+        padding: 6px 0 !important;
 
         // hide all icons except archive and overflow
         .#{$remind},
@@ -181,16 +177,17 @@
 
       // reminder
       .#{$note}-#{$remind}-#{$popup} {
-        float: left;
-        width: 18px;
-        height: 100%;
-        background-size: 18px 18px;
         background-position: 50%;
+        background-size: 18px 18px;
         border: 0;
+        float: left;
+        height: 100%;
         padding: 0;
+        width: 18px;
 
-        .IZ65Hb-zyxPWd-bVEB4e-V67aGc,
-        .IZ65Hb-zyxPWd-bVEB4e-VkLyEc {
+        // reminder details and remove
+        .#{$note}-#{$remind}-#{$popup}-#{$detail},
+        .#{$note}-#{$remind}-#{$popup}-#{$remove} {
           display: none;
         }
       }
@@ -204,9 +201,6 @@
       .#{$note}-#{$tags} {
         display: none;
       }
-
     }
-
   }
-
 }

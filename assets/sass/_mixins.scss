@@ -1,7 +1,7 @@
 @mixin full-screen {
-  height: 100%;
   display: flex;
   flex-flow: column;
+  height: 100%;
 }
 
 @mixin full-screen--content {
