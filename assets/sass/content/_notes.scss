@@ -26,6 +26,11 @@
     @include full-screen;
   }
 
+  // active note title
+  .#{$title}-#{$outer} {
+    padding: 15px !important;
+  }
+
   // active note content
   .#{$note}-#{$text} {
     @include full-screen--content;
