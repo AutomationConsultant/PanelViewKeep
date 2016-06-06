@@ -206,6 +206,11 @@
       .#{$note}-#{$tags} {
         display: none;
       }
+
+      // link previews
+      .#{$note}-#{$link}-#{$preview}-#{$grid} {
+        display: none;
+      }
     }
   }
 }
