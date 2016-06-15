@@ -211,5 +211,29 @@
       .#{$note}-#{$link}-#{$preview}-#{$grid} {
       }
     }
+
+    // draggable note
+    .#{$note}-#{$inner}.#{$drag}-#{$move} {
+      .#{$title}-#{$outer} {
+        font-family: $font-stack-body;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 19px !important;
+        padding: 12px 15px 15px !important;
+      }
+
+      .#{$title}-#{$outer}:not(.#{$placeholder}) ~ .#{$card}-#{$outer},
+      .#{$title}-#{$outer}:not(.#{$placeholder}) ~ .#{$checkbox}-#{$note}-#{$list},
+      .#{$note}-#{$toolbar},
+      .#{$note}-#{$tags} {
+        display: none;
+      }
+
+      // override and show the content if the title block is hidden
+      .#{$title}-#{$outer}[style="display: none;"]:not(.#{$placeholder}) ~ .#{$card}-#{$outer},
+      .#{$title}-#{$outer}[style="display: none;"]:not(.#{$placeholder}) ~ .#{$checkbox}-#{$note}-#{$list} {
+        display: block;
+      }
+    }
   }
 }
