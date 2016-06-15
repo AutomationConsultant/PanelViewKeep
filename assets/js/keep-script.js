@@ -63,4 +63,7 @@ $(document).ready(function() {
 			$('.keep-ext-icon .icon-checkbox').addClass('checked');
 		}
 	});
+
+	// hide the drawer on load
+	$('.gb_yd.gb_Wb.gb_Zb.gb_Xb.gb_g').removeClass('gb_g');
 });
